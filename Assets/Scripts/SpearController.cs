@@ -30,4 +30,9 @@ public class SpearController : MonoBehaviour
 		position += direction * moveSpeed * Time.deltaTime;
 		transform.position = position;
 	}
+
+	void OnCollisionEnter2D(Collision2D collision)
+	{
+		Destroy(gameObject);
+	}
 }
